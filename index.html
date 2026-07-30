@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0f17" />
+  <meta name="description" content="الصفحة الرسمية لتطبيق SpicyWiFi Agent لإدارة ومتابعة خدمات الشبكة." />
+  <title>SpicyWiFi Agent | الصفحة الرسمية</title>
+
+  <style>
+    :root {
+      --bg: #080b12;
+      --bg-soft: #0e1420;
+      --card: rgba(18, 26, 40, 0.82);
+      --card-strong: #121a28;
+      --text: #f5f7fb;
+      --muted: #aeb8c8;
+      --line: rgba(255, 255, 255, 0.10);
+      --accent: #ff4d23;
+      --accent-2: #ffb11b;
+      --success: #4ade80;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+      --radius: 24px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(255, 77, 35, 0.15), transparent 28%),
+        radial-gradient(circle at 90% 20%, rgba(255, 177, 27, 0.12), transparent 24%),
+        linear-gradient(180deg, #070a10 0%, #0a0f18 50%, #070a10 100%);
+      font-family: Tahoma, Arial, sans-serif;
+      line-height: 1.75;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, input { font: inherit; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin-inline: auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(8, 11, 18, 0.72);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+
+    .logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 15px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 12px 30px rgba(255, 77, 35, .28);
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-weight: 500;
+      font-size: 11px;
+      margin-top: -4px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: #d9dfeb;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover { color: #fff; }
+
+    .nav-cta,
+    .primary-btn,
+    .secondary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 14px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: .25s ease;
+      font-weight: 800;
+    }
+
+    .nav-cta,
+    .primary-btn {
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), #ff6a2f);
+      box-shadow: 0 14px 36px rgba(255, 77, 35, .25);
+    }
+
+    .nav-cta:hover,
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 42px rgba(255, 77, 35, .35);
+    }
+
+    .secondary-btn {
+      color: var(--text);
+      border-color: var(--line);
+      background: rgba(255,255,255,.045);
+    }
+
+    .secondary-btn:hover {
+      background: rgba(255,255,255,.08);
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      align-items: center;
+      gap: 56px;
+    }
+
+    .badge {
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      border: 1px solid rgba(74, 222, 128, .22);
+      background: rgba(74, 222, 128, .08);
+      color: #b7f7cb;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--success);
+      box-shadow: 0 0 0 7px rgba(74, 222, 128, .12);
+    }
+
+    h1 {
+      margin: 22px 0 18px;
+      font-size: clamp(40px, 7vw, 78px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #fff 10%, #ffc05b 42%, #ff5e32 86%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: clamp(16px, 2vw, 19px);
+      max-width: 680px;
+      margin: 0 0 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: #c7cfdb;
+      font-size: 13px;
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .phone-wrap {
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+
+    .glow {
+      position: absolute;
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 90, 48, .28), transparent 66%);
+      filter: blur(12px);
+    }
+
+    .phone {
+      position: relative;
+      width: min(330px, 86vw);
+      aspect-ratio: 10 / 19.5;
+      padding: 12px;
+      border-radius: 44px;
+      background: linear-gradient(145deg, #2a3342, #0d1118);
+      box-shadow: 0 35px 90px rgba(0,0,0,.52), inset 0 0 0 1px rgba(255,255,255,.08);
+      transform: rotate(-3deg);
+    }
+
+    .screen {
+      height: 100%;
+      border-radius: 34px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(255, 77, 35, .32), transparent 30%),
+        linear-gradient(180deg, #121927, #0a0f17 72%);
+      padding: 26px 20px;
+      border: 1px solid rgba(255,255,255,.06);
+    }
+
+    .notch {
+      width: 92px;
+      height: 25px;
+      border-radius: 0 0 16px 16px;
+      background: #05070a;
+      margin: -26px auto 24px;
+    }
+
+    .app-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .mini-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      font-weight: 900;
+    }
+
+    .signal {
+      display: flex;
+      gap: 3px;
+      align-items: end;
+    }
+
+    .signal i {
+      display: block;
+      width: 4px;
+      background: #d8dfeb;
+      border-radius: 3px;
+    }
+    .signal i:nth-child(1){height:7px}
+    .signal i:nth-child(2){height:11px}
+    .signal i:nth-child(3){height:15px}
+    .signal i:nth-child(4){height:19px}
+
+    .welcome {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .user-name {
+      font-size: 22px;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    .stat-card {
+      border-radius: 22px;
+      padding: 20px;
+      background: linear-gradient(135deg, rgba(255,77,35,.95), rgba(255,145,40,.95));
+      box-shadow: 0 18px 35px rgba(255,77,35,.2);
+      margin-bottom: 16px;
+    }
+
+    .stat-card small { opacity: .88; }
+    .stat-card strong { display:block; font-size: 34px; margin-top: 3px; }
+
+    .app-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .app-tile {
+      min-height: 100px;
+      padding: 15px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.055);
+      border: 1px solid rgba(255,255,255,.07);
+    }
+
+    .app-tile b { display:block; margin-top: 15px; font-size:14px; }
+    .app-tile span { color:var(--muted); font-size:11px; }
+
+    section { padding: 76px 0; }
+
+    .section-head {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 38px;
+    }
+
+    .eyebrow {
+      color: #ff9f54;
+      font-weight: 900;
+      font-size: 13px;
+      letter-spacing: .8px;
+    }
+
+    h2 {
+      margin: 9px 0 10px;
+      font-size: clamp(29px, 4vw, 45px);
+      line-height: 1.2;
+    }
+
+    .section-head p { color: var(--muted); margin:0; }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .feature-card,
+    .info-card,
+    .account-card {
+      border: 1px solid var(--line);
+      background: var(--card);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+    }
+
+    .feature-card {
+      padding: 26px;
+      transition: .25s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255, 110, 49, .33);
+    }
+
+    .icon-box {
+      width: 50px;
+      height: 50px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: rgba(255, 91, 41, .12);
+      color: #ff945b;
+      font-size: 23px;
+      margin-bottom: 20px;
+    }
+
+    .feature-card h3 { margin: 0 0 8px; font-size: 19px; }
+    .feature-card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .info-card { padding: 32px; }
+    .info-card h3 { font-size: 26px; margin: 0 0 12px; }
+    .info-card p { color: var(--muted); margin: 0; }
+
+    .check-list {
+      display: grid;
+      gap: 13px;
+      margin-top: 24px;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: #e9edf4;
+    }
+
+    .check {
+      flex: 0 0 23px;
+      width: 23px;
+      height: 23px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: rgba(74,222,128,.11);
+      color: var(--success);
+      font-size: 13px;
+      margin-top: 3px;
+    }
+
+    .numbers {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      height: 100%;
+    }
+
+    .number-box {
+      padding: 24px;
+      border-radius: 20px;
+      background: linear-gradient(145deg, rgba(255,255,255,.065), rgba(255,255,255,.025));
+      border: 1px solid var(--line);
+    }
+
+    .number-box strong {
+      display: block;
+      font-size: 28px;
+      margin-bottom: 6px;
+    }
+
+    .number-box span { color: var(--muted); font-size: 13px; }
+
+    .accounts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .account-card {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .account-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 110px;
+      height: 110px;
+      background: radial-gradient(circle, rgba(255, 99, 43, .22), transparent 70%);
+      pointer-events: none;
+    }
+
+    .account-top {
+      padding: 24px 24px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .account-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 15px;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,.07);
+      border: 1px solid var(--line);
+      font-weight: 900;
+    }
+
+    .account-body { padding: 0 24px 24px; }
+    .account-body h3 { margin: 0 0 4px; }
+    .account-body p { color: var(--muted); margin: 0 0 17px; font-size: 13px; }
+
+    .account-number {
+      direction: ltr;
+      text-align: left;
+      padding: 13px 14px;
+      border-radius: 13px;
+      background: rgba(0,0,0,.25);
+      border: 1px dashed rgba(255,255,255,.16);
+      font-weight: 800;
+      letter-spacing: .6px;
+      overflow-wrap: anywhere;
+      margin-bottom: 12px;
+    }
+
+    .copy-btn {
+      width: 100%;
+      min-height: 43px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      cursor: pointer;
+      font-weight: 800;
+      transition: .2s ease;
+    }
+
+    .copy-btn:hover { background: rgba(255,255,255,.09); }
+
+    .download-box {
+      border-radius: 30px;
+      padding: clamp(28px, 6vw, 55px);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 26px;
+      align-items: center;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(255,255,255,.12), transparent 24%),
+        linear-gradient(135deg, #e73d1b, #ff702e 48%, #ffad2d);
+      box-shadow: 0 30px 80px rgba(255, 82, 34, .25);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .download-box::after {
+      content: "SW";
+      position: absolute;
+      left: 22px;
+      bottom: -47px;
+      font-size: 150px;
+      font-weight: 900;
+      opacity: .08;
+    }
+
+    .download-box h2 { margin: 0 0 8px; }
+    .download-box p { margin: 0; opacity: .9; }
+
+    .download-box .secondary-btn {
+      background: #fff;
+      color: #111827;
+      border-color: #fff;
+      min-width: 170px;
+      z-index: 1;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.035);
+      transition: .2s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,.06);
+    }
+
+    .contact-card .icon-box { margin:0; flex:0 0 48px; }
+    .contact-card b { display:block; }
+    .contact-card span { color:var(--muted); font-size:13px; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 27px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .notice {
+      margin-top: 18px;
+      padding: 14px 16px;
+      color: #ffd7c7;
+      background: rgba(255, 92, 41, .08);
+      border: 1px solid rgba(255, 92, 41, .18);
+      border-radius: 14px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links { display:none; }
+      .hero { padding-top: 60px; }
+      .hero-grid,
+      .about-grid { grid-template-columns: 1fr; }
+      .phone-wrap { margin-top: 20px; }
+      .features,
+      .accounts-grid,
+      .contact-grid { grid-template-columns: repeat(2, 1fr); }
+      .download-box { grid-template-columns: 1fr; }
+      .download-box .secondary-btn { width: fit-content; }
+    }
+
+    @media (max-width: 620px) {
+      .container { width: min(calc(100% - 22px), var(--max)); }
+      .nav-inner { min-height: 68px; }
+      .brand small { display:none; }
+      .nav-cta { min-height: 42px; padding: 0 14px; font-size:13px; }
+      h1 { letter-spacing: -1px; }
+      .features,
+      .accounts-grid,
+      .contact-grid,
+      .numbers { grid-template-columns: 1fr; }
+      .hero-actions a { width:100%; }
+      .phone { width: min(300px, 88vw); }
+      .footer-inner { flex-direction: column; text-align:center; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="SpicyWiFi Agent">
+        <span class="logo">SW</span>
+        <span>
+          SpicyWiFi Agent
+          <small>Network Management Application</small>
+        </span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#about">عن البرنامج</a>
+        <a href="#features">المميزات</a>
+        <a href="#accounts">الحسابات</a>
+        <a href="#contact">التواصل</a>
+      </div>
+
+      <a class="nav-cta" href="#download">تحميل التطبيق</a>
+    </div>
+  </nav>
+
+  <main id="home">
+    <header class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge"><span class="dot"></span> التطبيق متاح ويعمل بشكل مستقر</div>
+          <h1><span class="gradient-text">SpicyWiFi Agent</span><br>إدارة أسهل، متابعة أسرع.</h1>
+          <p>
+            تطبيق مخصص لعملاء ووكلاء SpicyWiFi، يوفّر وصولاً سريعاً إلى معلومات الحساب،
+            حالة الخدمات، الإشعارات المهمة، الدعم الفني وتفاصيل الاشتراك من مكان واحد.
+          </p>
+
+          <div class="hero-actions">
+            <!-- استبدل الرابط أدناه برابط تحميل التطبيق الحقيقي -->
+            <a class="primary-btn" href="#download">⬇ تحميل التطبيق</a>
+            <a class="secondary-btn" href="#features">استعراض المميزات</a>
+          </div>
+
+          <div class="hero-meta">
+            <span>✓ واجهة عربية</span>
+            <span>✓ متوافق مع أندرويد</span>
+            <span>✓ دعم فني مباشر</span>
+          </div>
+        </div>
+
+        <div class="phone-wrap" aria-label="معاينة تطبيق SpicyWiFi Agent">
+          <div class="glow"></div>
+          <div class="phone">
+            <div class="screen">
+              <div class="notch"></div>
+              <div class="app-head">
+                <div class="mini-logo">SW</div>
+                <div class="signal"><i></i><i></i><i></i><i></i></div>
+              </div>
+              <div class="welcome">أهلاً بك في</div>
+              <div class="user-name">SpicyWiFi Agent</div>
+              <div class="stat-card">
+                <small>حالة الخدمة</small>
+                <strong>نشطة</strong>
+                <small>جميع الأنظمة تعمل بصورة طبيعية</small>
+              </div>
+              <div class="app-grid">
+                <div class="app-tile">📡<b>الخدمات</b><span>متابعة الاشتراكات</span></div>
+                <div class="app-tile">🔔<b>الإشعارات</b><span>تنبيهات مباشرة</span></div>
+                <div class="app-tile">💳<b>الحسابات</b><span>طرق الدفع</span></div>
+                <div class="app-tile">🛠️<b>الدعم</b><span>تواصل سريع</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="features">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">مميزات التطبيق</div>
+          <h2>كل ما تحتاجه لإدارة خدماتك</h2>
+          <p>واجهة بسيطة وسريعة تساعدك على الوصول إلى أهم المعلومات والخدمات بدون تعقيد.</p>
+        </div>
+
+        <div class="features">
+          <article class="feature-card">
+            <div class="icon-box">📊</div>
+            <h3>متابعة حالة الخدمة</h3>
+            <p>عرض حالة الأنظمة والخدمات والتحديثات المهمة بصورة واضحة ومباشرة.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon-box">🔔</div>
+            <h3>إشعارات فورية</h3>
+            <p>استلام تنبيهات الصيانة، التحديثات، انتهاء الاشتراك وأخبار الخدمة.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon-box">💳</div>
+            <h3>طرق الدفع</h3>
+            <p>الوصول السريع إلى أرقام الحسابات المعتمدة ونسخ الرقم بنقرة واحدة.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon-box">🧾</div>
+            <h3>تفاصيل الاشتراك</h3>
+            <p>عرض معلومات الحساب والباقة وتاريخ الانتهاء والبيانات المرتبطة بالخدمة.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon-box">🛠️</div>
+            <h3>دعم فني مباشر</h3>
+            <p>روابط تواصل سريعة مع فريق SpicyWiFi لحل المشاكل والاستفسارات.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon-box">🔐</div>
+            <h3>أمان وخصوصية</h3>
+            <p>تصميم يركز على سهولة الاستخدام وحماية بيانات الدخول والمعلومات الأساسية.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+          <article class="info-card">
+            <div class="eyebrow">عن SpicyWiFi Agent</div>
+            <h3>تطبيق واحد لخدمات SpicyWiFi</h3>
+            <p>
+              صُمم التطبيق لتسهيل التواصل وإدارة المعلومات الخاصة بالعملاء والوكلاء،
+              مع تحديثات مستمرة وواجهة متجاوبة تعمل بسلاسة على أجهزة أندرويد.
+            </p>
+            <div class="check-list">
+              <div class="check-item"><span class="check">✓</span><span>تصميم عربي واضح وسهل الاستخدام.</span></div>
+              <div class="check-item"><span class="check">✓</span><span>إمكانية إضافة خدمات جديدة مستقبلاً.</span></div>
+              <div class="check-item"><span class="check">✓</span><span>روابط مباشرة للتحديث والدعم والدفع.</span></div>
+              <div class="check-item"><span class="check">✓</span><span>مناسب للعملاء والوكلاء وأصحاب الشبكات.</span></div>
+            </div>
+          </article>
+
+          <article class="info-card">
+            <div class="numbers">
+              <div class="number-box"><strong>24/7</strong><span>وصول إلى معلومات الخدمة</span></div>
+              <div class="number-box"><strong>100%</strong><span>واجهة متجاوبة للموبايل</span></div>
+              <div class="number-box"><strong>1</strong><span>تطبيق يجمع الخدمات المهمة</span></div>
+              <div class="number-box"><strong>Fast</strong><span>أداء سريع وتجربة سلسة</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="accounts">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">الحسابات المعتمدة</div>
+          <h2>طرق الدفع والتحويل</h2>
+          <p>اختر طريقة التحويل المناسبة، ثم انسخ الرقم بنقرة واحدة.</p>
+        </div>
+
+        <div class="accounts-grid">
+          <article class="account-card">
+            <div class="account-top">
+              <div><b>زين كاش</b><br><small style="color:var(--muted)">ZainCash</small></div>
+              <div class="account-logo">ZC</div>
+            </div>
+            <div class="account-body">
+              <h3>رقم المحفظة</h3>
+              <p>الحساب الرسمي لـ SpicyWiFi</p>
+              <div class="account-number" id="zainNumber" dir="ltr">07508504566</div>
+              <button class="copy-btn" data-copy="zainNumber">نسخ الرقم</button>
+            </div>
+          </article>
+
+          <article class="account-card">
+            <div class="account-top">
+              <div><b>ماستر كارد</b><br><small style="color:var(--muted)">Mastercard</small></div>
+              <div class="account-logo">MC</div>
+            </div>
+            <div class="account-body">
+              <h3>رقم البطاقة</h3>
+              <p>الحساب الرسمي لـ SpicyWiFi</p>
+              <div class="account-number" id="mastercardNumber" dir="ltr">7114198315</div>
+              <button class="copy-btn" data-copy="mastercardNumber">نسخ الرقم</button>
+            </div>
+          </article>
+
+          <article class="account-card">
+            <div class="account-top">
+              <div><b>سوبر كي</b><br><small style="color:var(--muted)">SuperQi</small></div>
+              <div class="account-logo">SQ</div>
+            </div>
+            <div class="account-body">
+              <h3>رقم المحفظة</h3>
+              <p>الحساب الرسمي لـ SpicyWiFi</p>
+              <div class="account-number" id="superQiNumber" dir="ltr">07719828578</div>
+              <button class="copy-btn" data-copy="superQiNumber">نسخ الرقم</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="notice">
+          تنبيه: بعد التحويل، يرجى إرسال صورة الوصل إلى الدعم مع اسم الحساب أو رقم الاشتراك لتأكيد عملية الدفع.
+        </div>
+      </div>
+    </section>
+
+    <section id="download">
+      <div class="container">
+        <div class="download-box">
+          <div>
+            <h2>حمّل SpicyWiFi Agent الآن</h2>
+            <p>النسخة المخصصة لأجهزة أندرويد — سريعة، خفيفة وسهلة الاستخدام.</p>
+          </div>
+          <!-- استبدل # برابط ملف APK أو رابط صفحة Releases على GitHub -->
+          <a class="secondary-btn" href="#" onclick="alert('ضع رابط تحميل التطبيق الحقيقي داخل ملف index.html'); return false;">تحميل APK</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">تواصل معنا</div>
+          <h2>الدعم الرسمي لـ SpicyWiFi</h2>
+          <p>تواصل مع فريق SpicyWiFi عبر القنوات الرسمية أدناه.</p>
+        </div>
+
+        <div class="contact-grid">
+          <a class="contact-card" href="https://t.me/spicywifi_1iq" target="_blank" rel="noopener noreferrer">
+            <div class="icon-box">✈️</div>
+            <div><b>Telegram</b><span dir="ltr">@spicywifi_1iq</span></div>
+          </a>
+          <a class="contact-card" href="https://wa.me/9647880482666" target="_blank" rel="noopener noreferrer">
+            <div class="icon-box">💬</div>
+            <div><b>WhatsApp</b><span dir="ltr">07880482666</span></div>
+          </a>
+          <a class="contact-card" href="mailto:support.wifispicy@gmail.com">
+            <div class="icon-box">✉️</div>
+            <div><b>Email</b><span dir="ltr">support.wifispicy@gmail.com</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> SpicyWiFi. جميع الحقوق محفوظة.</div>
+      <div>Designed for SpicyWiFi Agent</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.querySelectorAll('.copy-btn').forEach((button) => {
+      button.addEventListener('click', async () => {
+        const target = document.getElementById(button.dataset.copy);
+        const value = target.textContent.trim();
+        try {
+          await navigator.clipboard.writeText(value);
+          const oldText = button.textContent;
+          button.textContent = 'تم النسخ ✓';
+          setTimeout(() => button.textContent = oldText, 1600);
+        } catch (error) {
+          alert('تعذر النسخ تلقائياً، انسخ الرقم يدوياً: ' + value);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
