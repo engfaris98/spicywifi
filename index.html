@@ -565,6 +565,52 @@
       z-index: 1;
     }
 
+    .download-actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(180px, 1fr));
+      gap: 12px;
+      z-index: 2;
+    }
+
+    .download-app-btn {
+      min-width: 210px;
+      min-height: 58px;
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      background: #fff;
+      color: #111827;
+      border-radius: 15px;
+      border: 1px solid rgba(255,255,255,.55);
+      font-weight: 900;
+      box-shadow: 0 12px 28px rgba(0,0,0,.13);
+      transition: .2s ease;
+    }
+
+    .download-app-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 34px rgba(0,0,0,.2);
+    }
+
+    .download-app-btn .platform-icon {
+      font-size: 25px;
+      line-height: 1;
+    }
+
+    .download-app-btn span {
+      display: grid;
+      line-height: 1.25;
+    }
+
+    .download-app-btn small {
+      font-size: 10px;
+      font-weight: 700;
+      color: #687386;
+      margin-top: 3px;
+    }
+
     .contact-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -625,6 +671,7 @@
       .accounts-grid,
       .contact-grid { grid-template-columns: repeat(2, 1fr); }
       .download-box { grid-template-columns: 1fr; }
+      .download-actions { width: 100%; }
       .download-box .secondary-btn { width: fit-content; }
     }
 
@@ -639,6 +686,8 @@
       .contact-grid,
       .numbers { grid-template-columns: 1fr; }
       .hero-actions a { width:100%; }
+      .download-actions { grid-template-columns: 1fr; }
+      .download-app-btn { min-width: 0; width: 100%; }
       .phone { width: min(300px, 88vw); }
       .footer-inner { flex-direction: column; text-align:center; }
     }
@@ -662,7 +711,7 @@
         <a href="#contact">التواصل</a>
       </div>
 
-      <a class="nav-cta" href="#download">تحميل التطبيق</a>
+      <a class="nav-cta" href="#download">تحميل التطبيقات</a>
     </div>
   </nav>
 
@@ -685,7 +734,7 @@
 
           <div class="hero-meta">
             <span>✓ واجهة عربية</span>
-            <span>✓ متوافق مع أندرويد</span>
+            <span>✓ متوافق مع أندرويد وWindows</span>
             <span>✓ دعم فني مباشر</span>
           </div>
         </div>
@@ -769,7 +818,7 @@
             <h3>تطبيق واحد لخدمات SpicyWiFi</h3>
             <p>
               صُمم التطبيق لتسهيل التواصل وإدارة المعلومات الخاصة بالعملاء والوكلاء،
-              مع تحديثات مستمرة وواجهة متجاوبة تعمل بسلاسة على أجهزة أندرويد.
+              مع تحديثات مستمرة وواجهة متجاوبة تعمل بسلاسة على أجهزة أندرويد وWindows.
             </p>
             <div class="check-list">
               <div class="check-item"><span class="check">✓</span><span>تصميم عربي واضح وسهل الاستخدام.</span></div>
@@ -850,11 +899,24 @@
       <div class="container">
         <div class="download-box">
           <div>
-            <h2>حمّل SpicyWiFi Agent الآن</h2>
-            <p>النسخة المخصصة لأجهزة أندرويد — سريعة، خفيفة وسهلة الاستخدام.</p>
+            <h2>حمّل SpicyWiFi Agent</h2>
+            <p>اختر النسخة المناسبة لجهازك — Android أو Windows.</p>
           </div>
-          <!-- استبدل # برابط ملف APK أو رابط صفحة Releases على GitHub -->
-          <a class="secondary-btn" href="#" onclick="alert('ضع رابط تحميل التطبيق الحقيقي داخل ملف index.html'); return false;">تحميل APK</a>
+          <div class="download-actions">
+            <!-- ارفع ملف APK بنفس الاسم بجانب index.html أو غيّر الرابط أدناه -->
+            <a class="download-app-btn" href="SpicyWiFiAgent-Android.apk" download>
+              <span class="platform-icon">🤖</span>
+              <span>تحميل Android<small>APK</small></span>
+            </a>
+            <!-- ارفع ملف تثبيت Windows بنفس الاسم بجانب index.html أو غيّر الرابط أدناه -->
+            <a class="download-app-btn" href="SpicyWiFiAgent-Windows.exe" download>
+              <span class="platform-icon">🪟</span>
+              <span>تحميل Windows<small>Windows 10 / 11</small></span>
+            </a>
+          </div>
+        </div>
+        <div class="notice">
+          ملاحظة: حتى يعمل زر Windows، ارفع ملف التثبيت باسم <b dir="ltr">SpicyWiFiAgent-Windows.exe</b> داخل نفس مجلد <b>index.html</b> على GitHub.
         </div>
       </div>
     </section>
