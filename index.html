@@ -52,7 +52,7 @@
           <h1><span class="grad">SpicyWiFi Agent</span><br>إدارة أسهل، متابعة أسرع.</h1>
           <p class="lead">تطبيق مخصص لعملاء ووكلاء SpicyWiFi لمتابعة الحسابات والأجهزة والخدمات والتنبيهات والدعم الفني من مكان واحد.</p>
           <div class="hero-actions"><a class="btn primary" href="#download">⬇ تحميل التطبيق</a><a class="btn secondary" href="#features">استعراض المميزات</a></div>
-          <div class="hero-meta"><span>✓ واجهة عربية</span><span>✓ Android وWindows</span><span>✓ تحديث تلقائي على Windows</span><span>✓ دعم فني مباشر</span></div>
+          <div class="hero-meta"><span>✓ واجهة عربية</span><span>✓ Android وWindows</span><span>✓ صفحات تحميل رسمية</span><span>✓ دعم فني مباشر</span></div>
         </div>
         <aside class="preview">
           <div class="preview-head"><div><small>لوحة إدارة الشبكة</small><h3>SpicyWiFi Agent</h3></div><div class="preview-icon">SW</div></div>
@@ -78,7 +78,7 @@
 
     <section id="about">
       <div class="container">
-        <div class="section-head"><div class="eyebrow">عن SpicyWiFi Agent</div><h2>منصة واحدة للشبكة والعملاء</h2><p>نسخة Windows الرسمية تعمل مع بيانات SpicyWiFi السحابية وتستقبل التحديثات الجديدة من داخل التطبيق.</p></div>
+        <div class="section-head"><div class="eyebrow">عن SpicyWiFi Agent</div><h2>منصة واحدة للشبكة والعملاء</h2><p>نسخ Android وWindows الرسمية تعمل مع بيانات SpicyWiFi السحابية من نفس الحساب.</p></div>
       </div>
     </section>
 
@@ -98,11 +98,11 @@
         <div class="download-box">
           <div><h2>حمّل SpicyWiFi Agent</h2><p>اختر النسخة المناسبة لجهازك — Android أو Windows.</p></div>
           <div class="download-actions">
-            <a class="download-app" href="SpicyWiFiAgent-Android.apk" download><span class="picon">🤖</span><span>تحميل Android<small>APK</small></span></a>
+            <a class="download-app" href="android.html"><span class="picon">🤖</span><span>تحميل Android<small>APK</small><span class="release-pill">● <span id="androidVersion">آخر إصدار Android</span></span></span></a>
             <a class="download-app" href="windows.html"><span class="picon">🪟</span><span>تحميل Windows<small>Windows 10 / 11</small><span class="release-pill">● <span id="windowsVersion">آخر إصدار Stable</span></span></span></a>
           </div>
         </div>
-        <div class="download-info">✅ زر Windows مرتبط الآن بصفحة التحميل الرسمية ويجلب <b id="latestVersionText">آخر إصدار</b> تلقائياً. لا تحتاج إلى رفع ملف باسم ثابت داخل الموقع بعد الآن.</div>
+        <div class="download-info">✅ Android وWindows مرتبطان الآن بصفحات التحميل الرسمية، ويتم عرض أرقام الإصدارات من ملفات التحديث تلقائياً.</div>
       </div>
     </section>
 
@@ -128,7 +128,11 @@
     }));
     fetch('windows-version.json?ts='+Date.now(),{cache:'no-store'})
       .then(r=>{if(!r.ok)throw new Error('manifest');return r.json()})
-      .then(d=>{if(d.version){document.getElementById('windowsVersion').textContent='الإصدار '+d.version+' Stable';document.getElementById('latestVersionText').textContent=d.version}})
+      .then(d=>{if(d.version){document.getElementById('windowsVersion').textContent='الإصدار '+d.version+' Stable'}})
+      .catch(()=>{});
+    fetch('android-version.json?ts='+Date.now(),{cache:'no-store'})
+      .then(r=>{if(!r.ok)throw new Error('manifest');return r.json()})
+      .then(d=>{if(d.version){document.getElementById('androidVersion').textContent='الإصدار '+d.version}})
       .catch(()=>{});
   </script>
 </body>
