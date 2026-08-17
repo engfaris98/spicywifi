@@ -1,5 +1,5 @@
 {
-  "available": false,
+  "available": true,
   "version": "12.1.12",
   "versionCode": 134,
   "packageName": "com.spicywifi.agent",
@@ -8,5 +8,5 @@
   "downloadUrl": "https://github.com/engfaris98/spicywifi/releases/download/android-v12.1.12/SpicyWiFiAgent-Android-12.1.12.apk",
   "sha256": "1277c6e144d7b054f0932f7f345428bb9930b698c4a3b154f42673c524737cc6",
   "sizeBytes": 33687125,
-  "releaseNotes": "SpicyWiFi Agent Android 12.1.12 - النسخة الرسمية لنظام Android. سيتم تفعيل زر التحميل بعد نشر ملف APK في GitHub Releases."
+  "releaseNotes": "SpicyWiFi Agent Android 12.1.12 - النسخة الرسمية المستقرة لنظام Android."
 }
