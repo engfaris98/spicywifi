@@ -1,12 +1,12 @@
 {
   "available": true,
-  "version": "12.1.12",
-  "versionCode": 134,
+  "version": "12.1.13",
+  "versionCode": 135,
   "packageName": "com.spicywifi.agent",
   "minSdk": 26,
   "targetSdk": 36,
-  "downloadUrl": "https://github.com/engfaris98/spicywifi/releases/download/android-v12.1.12/SpicyWiFiAgent-Android-12.1.12.apk",
-  "sha256": "1277c6e144d7b054f0932f7f345428bb9930b698c4a3b154f42673c524737cc6",
-  "sizeBytes": 33687125,
-  "releaseNotes": "SpicyWiFi Agent Android 12.1.12 - النسخة الرسمية المستقرة لنظام Android."
+  "downloadUrl": "https://github.com/engfaris98/spicywifi/releases/download/android-v12.1.13/SpicyWiFiAgent-Android-12.1.13.apk",
+  "sha256": "هنا_بصمة_SHA256_للملف",
+  "sizeBytes": 0,
+  "releaseNotes": "SpicyWiFi Agent Android 12.1.13 - تحسين Earthlink Reseller وجلب جميع صفحات المشتركين وإصلاحات عامة."
 }
