@@ -1,12 +1,13 @@
 {
   "available": true,
-  "version": "12.1.19",
-  "versionCode": 141,
+  "version": "12.1.21",
+  "versionCode": 143,
   "packageName": "com.spicywifi.agent",
   "minSdk": 26,
   "targetSdk": 36,
   "downloadUrl": "https://github.com/engfaris98/spicywifi/releases/latest/download/SpicyWiFiAgent-Android.apk",
-  "sha256": "b4097a2e60799854cbf7c43037f64b9242f09f84f854050a850c2bf427f4e741",
-  "sizeBytes": 6349212,
-  "releaseNotes": "SpicyWiFi Agent Android 12.1.19 - إصلاحات شاملة لقسم Earthlink Reseller: جلب نطاق All، قراءة جميع المشتركين والمتصلين، إصلاح قائمة Online Users، واعتماد التحديث اليدوي لتقليل التأخير. ملاحظة: بسبب الانتقال إلى توقيع SpicyWiFi الرسمي قد يحتاج مستخدمو النسخ القديمة إلى حذف النسخة السابقة وتثبيت هذه النسخة مرة واحدة فقط."
+  "sha256": "c24257547c808ade710ddca3e69dbee70ddb778a8fcd5440df9cf15956748926",
+  "sizeBytes": 6349216,
+  "releaseNotes": "SpicyWiFi Agent Android 12.1.21 - تحسين وتصغير واجهة Earthlink Reseller، إضافة أقسام المنتهية والديون، تحسين عرض المشتركين والفلاتر، إضافة فحص التحديثات من GitHub، وتحسينات عامة على الأداء والاستقرار.",
+  "forceUpdate": false
 }
