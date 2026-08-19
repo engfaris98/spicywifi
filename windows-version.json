@@ -1,8 +1,8 @@
 {
-  "version": "17.0.0",
+  "version": "17.0.1",
   "mandatory": false,
-  "downloadUrl": "https://github.com/engfaris98/spicywifi/releases/download/v17.0.0/SpicyWiFiAgent-17.0.0.exe",
-  "sha256": "5c0724c0ce43fbb673379de66fe6c27af2724edc947acd29a3c8b0c9689fe5cd",
-  "sizeBytes": 114598400,
-  "releaseNotes": "SpicyWiFi Agent 17.0.0 Stable - أول إصدار Windows مستقر، مع التحديث التلقائي، التحقق من SHA-256، تخصيص الخلفية، أدوات الشبكة والطيف، مراقبة الأجهزة، SAS Radius وEarthlink، Telegram، النسخ الاحتياطي، وتحسينات السجل والاستعادة."
+  "downloadUrl": "https://github.com/engfaris98/spicywifi/releases/download/v17.0.1/SpicyWiFiAgent-17.0.1.exe",
+  "sha256": "05aea886c0938cd03615b16755f5c816a2c3ea17bceaba864317683d76b14a4e",
+  "sizeBytes": 114294784,
+  "releaseNotes": "SpicyWiFi Agent 17.0.1 Stable - إضافة تسجيل الدخول التلقائي والاحتفاظ بجلسة المستخدم بعد إغلاق التطبيق، حماية بيانات الجلسة باستخدام Windows DPAPI، عدم حفظ كلمة المرور، حذف الجلسة عند تسجيل الخروج، وتحسينات على الاستقرار والأمان."
 }
