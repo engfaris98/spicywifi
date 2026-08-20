@@ -1,8 +1,8 @@
 {
-  "version": "17.0.2",
+  "version": "17.0.4",
   "mandatory": false,
-  "downloadUrl": "https://github.com/engfaris98/spicywifi/releases/download/v17.0.2/SpicyWiFiAgent-17.0.2.exe",
-  "sha256": "547b0c944969f54d128106259676413ba164859d97cd5d7127ee54ed184ecb9e",
-  "sizeBytes": 114294784,
-  "releaseNotes": "SpicyWiFi Agent 17.0.2 Stable - إصلاح Earthlink Reseller لعرض All وجلب جميع صفحات المشتركين والـ Online مع Pagination ومنع التكرار، وتحسين توافق SAS Radius ومعالجة أخطاء الاتصال، مع الإبقاء على تسجيل الدخول التلقائي الآمن وتحسينات الاستقرار."
+  "downloadUrl": "https://github.com/engfaris98/spicywifi/releases/download/v17.0.4/SpicyWiFiAgent-17.0.4.exe",
+  "sha256": "cd62032fe41f486a2c989eb06b76f2c101b3bd6c77c43f7b29fc3ce3d7071c9b",
+  "sizeBytes": 114700800,
+  "releaseNotes": "SpicyWiFi Agent 17.0.4 Stable - تحسين Earthlink Reseller مع All وPagination لجميع الصفحات، تصحيح حالات Active/Online/Offline/Expired/Debts وفصل Online عن Payment Status، تحديث يدوي مع وقت آخر تحديث وتحميل Expired وDebts عند فتحهما وواجهة Compact. تحسين SAS Radius بإخفاء روابط السيرفرات الجاهزة وعرض الأسماء فقط مع رابط مخصص عند الحاجة، Migration للإعدادات السابقة والحفاظ على دعم بطاقات SAS، مع إصلاحات Parsing/Loading/Exceptions والحفاظ على نظام التحديث الحالي وتسجيل الدخول التلقائي الآمن."
 }
