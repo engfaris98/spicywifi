@@ -1,13 +1,13 @@
 {
   "available": true,
-  "version": "12.1.21",
-  "versionCode": 143,
+  "version": "12.1.22",
+  "versionCode": 144,
   "packageName": "com.spicywifi.agent",
   "minSdk": 26,
   "targetSdk": 36,
   "downloadUrl": "https://github.com/engfaris98/spicywifi/releases/latest/download/SpicyWiFiAgent-Android.apk",
-  "sha256": "c24257547c808ade710ddca3e69dbee70ddb778a8fcd5440df9cf15956748926",
-  "sizeBytes": 6349216,
-  "releaseNotes": "SpicyWiFi Agent Android 12.1.21 - تحسين وتصغير واجهة Earthlink Reseller، إضافة أقسام المنتهية والديون، تحسين عرض المشتركين والفلاتر، إضافة فحص التحديثات من GitHub، وتحسينات عامة على الأداء والاستقرار.",
+  "sha256": "49709ce0cab20180951a3be924181e1740325f61ba5ba85cd572915b7035e85f",
+  "sizeBytes": 6349212,
+  "releaseNotes": "SpicyWiFi Agent Android 12.1.22 - إخفاء روابط سيرفرات SAS Radius من واجهة المستخدم، عرض أسماء السيرفرات فقط، تشغيل الروابط الحقيقية بالخلفية، تحسين اختيار السيرفرات الجاهزة، والإبقاء على خيار الرابط المخصص مع تحسينات عامة على الأداء والاستقرار.",
   "forceUpdate": false
 }
