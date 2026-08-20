@@ -38,7 +38,7 @@
         <aside class="device">
           <div class="device-title">SpicyWiFi Agent for Windows</div>
           <div class="status"><span class="dot"></span> جاهز للتنزيل</div>
-          <div id="version" class="version skeleton">17.0.2</div>
+          <div id="version" class="version skeleton">17.0.4</div>
           <span class="stable">STABLE</span>
           <div class="meta">
             <div class="meta-row"><span>الإصدار</span><strong id="versionMeta">—</strong></div>
@@ -59,8 +59,8 @@
         </div>
 
         <div class="notes new">
-          <b>الجديد في الإصدار 17.0.2</b>
-          <p>إصلاح Earthlink Reseller لعرض خيار All وجلب جميع صفحات المشتركين والـ Online مع Pagination ومنع التكرار، وتحسين توافق SAS Radius ومعالجة أخطاء الاتصال، مع الإبقاء على تسجيل الدخول التلقائي الآمن وتحسينات الاستقرار.</p>
+          <b>الجديد في الإصدار 17.0.4</b>
+          <p>تحسين Earthlink Reseller مع دعم All وPagination لجميع الصفحات، وتصحيح حالات Active وOnline وOffline وExpired وDebts، واعتماد Online على حالة الاتصال الصحيحة بدل Payment Status. التحديث داخل Earthlink أصبح يدويًا بزر Refresh مع عرض وقت آخر تحديث وتحميل Expired وDebts عند فتحهما، مع واجهة Compact أوضح. كما تم تحسين SAS Radius بإخفاء روابط السيرفرات الجاهزة وعرض أسماء السيرفرات فقط، وإظهار حقل الرابط عند اختيار «رابط مخصص»، مع Migration آمن للإعدادات القديمة والحفاظ على دعم بطاقات SAS، إضافة إلى إصلاحات Parsing وLoading وExceptions مع الحفاظ على نظام التحديث وتسجيل الدخول التلقائي الآمن.</p>
         </div>
 
         <div class="notes">
@@ -82,10 +82,10 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     const fallback = {
-      version: '17.0.2',
-      downloadUrl: 'https://github.com/engfaris98/spicywifi/releases/download/v17.0.2/SpicyWiFiAgent-17.0.2.exe',
-      sha256: '547b0c944969f54d128106259676413ba164859d97cd5d7127ee54ed184ecb9e',
-      sizeBytes: 114294784
+      version: '17.0.4',
+      downloadUrl: 'https://github.com/engfaris98/spicywifi/releases/download/v17.0.4/SpicyWiFiAgent-17.0.4.exe',
+      sha256: 'cd62032fe41f486a2c989eb06b76f2c101b3bd6c77c43f7b29fc3ce3d7071c9b',
+      sizeBytes: 114700800
     };
 
     function humanSize(bytes){
