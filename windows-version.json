@@ -1,8 +1,8 @@
 {
-  "version": "17.0.7",
+  "version": "17.0.4",
   "mandatory": false,
-  "downloadUrl": "https://github.com/engfaris98/spicywifi/releases/download/v17.0.7/SpicyWiFiAgent-17.0.7.exe",
-  "sha256": "ee0de103d99c6b562b33bed8edb487cb90449471ed688ead093747ec2dc72f99",
-  "sizeBytes": 114795008,
-  "releaseNotes": "SpicyWiFi Agent 17.0.7 Stable - مزامنة تحسينات Android 12.1.30 مع Windows، تطوير SAS Radius وحالات الاشتراك وتغيير الباقة، تحسين Spectrum الآمن لأجهزة MikroTik وUbiquiti، وتحسين Mimosa Spectrum وSafe Apply مع Verify/Rollback، مع الحفاظ على Smart Check وإصلاحات Earthlink ونظام التحديث الحالي."
+  "downloadUrl": "https://github.com/engfaris98/spicywifi/releases/download/v17.0.4/SpicyWiFiAgent-17.0.4.exe",
+  "sha256": "cd62032fe41f486a2c989eb06b76f2c101b3bd6c77c43f7b29fc3ce3d7071c9b",
+  "sizeBytes": 114700800,
+  "releaseNotes": "SpicyWiFi Agent 17.0.4 Stable - تحسين Earthlink Reseller مع All وPagination لجميع الصفحات، تصحيح حالات Active/Online/Offline/Expired/Debts وفصل Online عن Payment Status، تحديث يدوي مع وقت آخر تحديث وتحميل Expired وDebts عند فتحهما وواجهة Compact. تحسين SAS Radius بإخفاء روابط السيرفرات الجاهزة وعرض الأسماء فقط مع رابط مخصص عند الحاجة، Migration للإعدادات السابقة والحفاظ على دعم بطاقات SAS، مع إصلاحات Parsing/Loading/Exceptions والحفاظ على نظام التحديث الحالي وتسجيل الدخول التلقائي الآمن."
 }
