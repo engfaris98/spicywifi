@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#080b12" />
-  <meta name="description" content="الموقع الرسمي لـ SpicyWiFi Agent — تحميل Android وWindows، الدعم، الحسابات والخدمات." />
-  <title>SpicyWiFi Agent | الصفحة الرسمية</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b14">
+  <meta name="description" content="الموقع الرسمي لـ SpicyWiFi Agent — تحميل Android وWindows، معلومات البرنامج، الحسابات الرسمية والدعم الفني.">
+  <title>SpicyWiFi Agent | الموقع الرسمي</title>
   <style>
     :root{
-      --bg:#070a10;--bg2:#0d121c;--card:#111824;--text:#f8fafc;--muted:#aeb8c8;
-      --line:rgba(255,255,255,.10);--accent:#ff5429;--accent2:#ffad28;--ok:#4ade80;
-      --shadow:0 24px 70px rgba(0,0,0,.36);--radius:24px;--max:1180px;
+      --bg:#070a12;--bg2:#0b1120;--panel:rgba(16,23,38,.80);--panel2:#101827;
+      --text:#f8fbff;--muted:#a8b3c7;--line:rgba(255,255,255,.09);
+      --orange:#ff642f;--gold:#ffb52e;--pink:#ff455c;--green:#4ade80;
+      --shadow:0 30px 90px rgba(0,0,0,.34);--r:24px;--max:1200px
     }
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);background:
-      radial-gradient(circle at 10% 8%,rgba(255,84,41,.13),transparent 25%),
-      radial-gradient(circle at 90% 15%,rgba(255,173,40,.09),transparent 23%),
-      linear-gradient(180deg,#070a10 0%,#0a0f18 48%,#070a10 100%);font-family:Tahoma,Arial,sans-serif;line-height:1.75;min-height:100vh;overflow-x:hidden}
-    a{color:inherit;text-decoration:none}.container{width:min(calc(100% - 32px),var(--max));margin:auto}
-    .nav{position:sticky;top:0;z-index:30;background:rgba(7,10,16,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-    .nav-inner{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:22px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:900}.logo{width:48px;height:48px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 12px 28px rgba(255,84,41,.3)}
-    .brand small{display:block;color:var(--muted);font-weight:500;font-size:11px;margin-top:-4px}.nav-links{display:flex;gap:20px;color:#d5dbe5;font-size:14px}.nav-links a:hover{color:#fff}
-    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:0 20px;border-radius:14px;font-weight:900;transition:.2s;border:1px solid transparent}
-    .nav-cta,.btn.primary{background:linear-gradient(135deg,var(--accent),#ff7630);box-shadow:0 14px 32px rgba(255,84,41,.25)}.nav-cta:hover,.btn.primary:hover{transform:translateY(-2px)}
-    .btn.secondary{border-color:var(--line);background:rgba(255,255,255,.04)}.btn.secondary:hover{background:rgba(255,255,255,.08)}
-    .hero{padding:86px 0 64px}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center}.badge{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border-radius:999px;border:1px solid rgba(74,222,128,.2);background:rgba(74,222,128,.07);color:#baf7cc;font-size:13px;font-weight:800}.dot{width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 6px rgba(74,222,128,.12)}
-    h1{font-size:clamp(42px,6.5vw,76px);line-height:1.08;margin:20px 0 16px;letter-spacing:-2px}.grad{background:linear-gradient(135deg,#fff 10%,#ffc05b 46%,#ff6135 86%);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:18px;color:var(--muted);max-width:690px;margin:0 0 28px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px}.hero-meta{display:flex;flex-wrap:wrap;gap:18px;color:#c8d0dc;font-size:13px;margin-top:25px}
-    .preview{position:relative;padding:28px;border-radius:32px;background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden}.preview:after{content:"SW";position:absolute;left:15px;bottom:-56px;font-size:160px;font-weight:900;opacity:.055}.preview-head{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px}.preview-icon{width:58px;height:58px;border-radius:19px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent2));font-weight:900;font-size:20px}.preview h3{margin:0;font-size:24px}.preview small{color:var(--muted)}.status-card{padding:20px;border-radius:21px;background:linear-gradient(135deg,#e94724,#ff9630);margin-bottom:14px}.status-card b{display:block;font-size:30px}.mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}.mini{padding:15px;border-radius:16px;background:rgba(255,255,255,.045);border:1px solid var(--line)}.mini b{display:block;margin-top:6px;font-size:13px}.mini span{font-size:11px;color:var(--muted)}
-    section{padding:70px 0}.section-head{text-align:center;max-width:730px;margin:0 auto 36px}.eyebrow{color:#ff9d50;font-size:13px;font-weight:900}.section-head h2{font-size:clamp(30px,4vw,44px);line-height:1.2;margin:8px 0}.section-head p{color:var(--muted);margin:0}.features,.accounts,.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{padding:24px;border-radius:22px;background:rgba(17,24,36,.84);border:1px solid var(--line);box-shadow:0 18px 48px rgba(0,0,0,.18);transition:.2s}.card:hover{transform:translateY(-4px);border-color:rgba(255,104,50,.28)}.icon{width:50px;height:50px;border-radius:16px;display:grid;place-items:center;background:rgba(255,84,41,.11);font-size:23px}.card h3{margin:14px 0 6px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:13px}
-    .download-box{position:relative;overflow:hidden;padding:clamp(30px,6vw,56px);border-radius:30px;background:linear-gradient(135deg,#ef431e,#ff702e 48%,#ffae29);box-shadow:0 28px 75px rgba(255,84,41,.22);display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center}.download-box:after{content:"SW";position:absolute;left:22px;bottom:-52px;font-size:160px;font-weight:900;opacity:.08}.download-box h2{font-size:clamp(30px,4vw,44px);margin:0 0 7px}.download-box p{margin:0;opacity:.9}.download-actions{display:grid;grid-template-columns:repeat(2,minmax(205px,1fr));gap:12px;z-index:2}.download-app{min-height:68px;padding:10px 18px;border-radius:16px;background:#fff;color:#111827;display:flex;align-items:center;justify-content:center;gap:12px;font-weight:900;box-shadow:0 12px 28px rgba(0,0,0,.14);transition:.2s}.download-app:hover{transform:translateY(-2px)}.download-app .picon{font-size:27px}.download-app span{display:grid;line-height:1.3}.download-app small{font-size:10px;color:#687386;margin-top:3px}.release-pill{display:inline-flex;align-items:center;gap:6px;margin-top:5px;font-size:10px;color:#18864b;font-weight:900}.download-info{margin-top:16px;padding:14px 16px;border-radius:15px;background:rgba(74,222,128,.07);border:1px solid rgba(74,222,128,.18);color:#cbf8d8;font-size:13px}.download-info b{direction:ltr;display:inline-block}
-    .account-num{direction:ltr;text-align:left;margin:13px 0;padding:12px 13px;border-radius:12px;background:rgba(0,0,0,.23);border:1px dashed rgba(255,255,255,.15);font-weight:900}.copy{width:100%;min-height:42px;border-radius:11px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:#fff;cursor:pointer;font-weight:800}.copy:hover{background:rgba(255,255,255,.08)}
-    .contact a{display:flex;align-items:center;gap:13px}.contact a .icon{flex:0 0 50px}.contact b{display:block}.contact span{font-size:12px;color:var(--muted)}footer{padding:26px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.footer{display:flex;justify-content:space-between;gap:18px;align-items:center}
-    @media(max-width:900px){.nav-links{display:none}.hero-grid{grid-template-columns:1fr}.preview{order:-1}.features,.accounts,.contact{grid-template-columns:repeat(2,1fr)}.download-box{grid-template-columns:1fr}.download-actions{width:100%}}
-    @media(max-width:620px){.container{width:min(calc(100% - 22px),var(--max))}.nav-inner{min-height:70px}.brand small{display:none}.nav-cta{padding:0 13px;min-height:42px;font-size:12px}h1{letter-spacing:-1px}.features,.accounts,.contact,.download-actions{grid-template-columns:1fr}.hero-actions .btn{width:100%}.footer{flex-direction:column;text-align:center}}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.8;background:
+      radial-gradient(circle at 12% 8%,rgba(255,100,47,.15),transparent 25%),
+      radial-gradient(circle at 88% 14%,rgba(255,181,46,.10),transparent 22%),
+      radial-gradient(circle at 50% 100%,rgba(92,79,255,.08),transparent 28%),
+      linear-gradient(180deg,#060911,#0a1020 48%,#060911);min-height:100vh;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}button{font:inherit}.container{width:min(calc(100% - 32px),var(--max));margin:auto}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(7,10,18,.76);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navin{min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:13px}.brand img{width:50px;height:50px;border-radius:17px;box-shadow:0 14px 34px rgba(255,95,45,.23)}.brand strong{display:block;font-size:18px;line-height:1.2}.brand small{display:block;color:var(--muted);font-size:11px;margin-top:3px}
+    .links{display:flex;align-items:center;gap:20px;color:#d8e0eb;font-size:14px}.links a{position:relative;padding:7px 0}.links a:after{content:"";position:absolute;right:0;bottom:0;width:0;height:2px;border-radius:9px;background:linear-gradient(90deg,var(--orange),var(--gold));transition:.2s}.links a:hover:after{width:100%}
+    .btn,.btn2{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:49px;padding:0 20px;border-radius:15px;font-weight:900;border:1px solid transparent;transition:.22s}.btn{background:linear-gradient(135deg,var(--orange),#ff7834 48%,var(--gold));box-shadow:0 15px 36px rgba(255,98,47,.24)}.btn:hover{transform:translateY(-2px);box-shadow:0 20px 42px rgba(255,98,47,.32)}.btn2{background:rgba(255,255,255,.035);border-color:var(--line)}.btn2:hover{background:rgba(255,255,255,.075);transform:translateY(-2px)}
+    .hero{padding:82px 0 64px}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}.badge{display:inline-flex;align-items:center;gap:9px;padding:9px 14px;border-radius:999px;background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.21);color:#c7f7d4;font-size:13px;font-weight:800}.dot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 7px rgba(74,222,128,.12)}
+    h1{font-size:clamp(42px,6vw,76px);line-height:1.06;margin:20px 0 18px;letter-spacing:-2px}.grad{background:linear-gradient(135deg,#fff 12%,#ffd991 38%,#ff8036 68%,#ff5260);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{color:var(--muted);font-size:clamp(16px,2vw,19px);max-width:700px;margin:0 0 28px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:25px}.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:710px}.q{padding:15px 17px;border-radius:17px;background:rgba(255,255,255,.04);border:1px solid var(--line)}.q b{display:block;font-size:17px}.q span{color:var(--muted);font-size:12px}
+    .visual{position:relative;min-height:570px;display:grid;place-items:center}.glow{position:absolute;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(255,91,45,.28),transparent 66%);filter:blur(14px)}.device{position:relative;width:min(420px,92vw);padding:24px;border-radius:32px;background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));border:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:blur(12px);z-index:1}.device-top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:20px}.appid{display:flex;align-items:center;gap:12px}.appid img{width:58px;height:58px;border-radius:19px}.appid b{display:block;font-size:18px}.appid small{color:var(--muted)}.live{font-size:11px;font-weight:900;color:#bdf4ca;background:rgba(74,222,128,.09);border:1px solid rgba(74,222,128,.18);padding:6px 10px;border-radius:999px}
+    .mainstat{padding:20px;border-radius:22px;background:linear-gradient(135deg,#e94924,#ff7c31 55%,#ffac30);box-shadow:0 18px 40px rgba(255,92,39,.23);margin-bottom:13px}.mainstat small{opacity:.9}.mainstat strong{display:block;font-size:32px;margin:2px 0}.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}.tile{padding:15px;border-radius:17px;background:rgba(255,255,255,.045);border:1px solid var(--line)}.tile b{display:block;margin-top:7px;font-size:13px}.tile span{color:var(--muted);font-size:11px}.float{position:absolute;right:-24px;bottom:30px;width:205px;padding:17px;border-radius:20px;background:rgba(9,14,26,.9);border:1px solid var(--line);box-shadow:0 22px 48px rgba(0,0,0,.35);z-index:3}.float small{color:#ffc990;font-weight:800}.bars{height:75px;display:flex;align-items:flex-end;gap:7px;margin-top:10px}.bars i{flex:1;border-radius:8px 8px 3px 3px;background:linear-gradient(180deg,var(--gold),var(--orange))}.bars i:nth-child(1){height:35%}.bars i:nth-child(2){height:56%}.bars i:nth-child(3){height:45%}.bars i:nth-child(4){height:76%}.bars i:nth-child(5){height:61%}.bars i:nth-child(6){height:90%}
+    section{padding:72px 0}.head{text-align:center;max-width:760px;margin:0 auto 38px}.eye{color:#ffad68;font-size:12px;font-weight:900;letter-spacing:1px;text-transform:uppercase}.head h2{font-size:clamp(30px,4vw,45px);line-height:1.2;margin:8px 0}.head p{color:var(--muted);margin:0}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{padding:25px;border-radius:var(--r);background:var(--panel);border:1px solid var(--line);box-shadow:0 18px 46px rgba(0,0,0,.18);transition:.22s;position:relative;overflow:hidden}.card:before{content:"";position:absolute;left:-20px;top:-25px;width:110px;height:110px;background:radial-gradient(circle,rgba(255,96,48,.13),transparent 70%)}.card:hover{transform:translateY(-5px);border-color:rgba(255,114,49,.27)}.icon{width:52px;height:52px;border-radius:17px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(255,97,47,.14),rgba(255,181,46,.14));border:1px solid rgba(255,255,255,.055);font-size:23px}.card h3{margin:14px 0 7px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:13px}
+    .platforms{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.platform{padding:30px;border-radius:28px;background:linear-gradient(145deg,rgba(20,28,45,.95),rgba(13,19,32,.86));border:1px solid var(--line);box-shadow:var(--shadow);position:relative;overflow:hidden}.platform:after{content:"";position:absolute;left:-40px;bottom:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,99,46,.14),transparent 68%)}.ptop{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:18px}.picon{width:58px;height:58px;border-radius:19px;display:grid;place-items:center;font-size:27px;background:rgba(255,255,255,.06);border:1px solid var(--line)}.stable{font-size:11px;color:#bdf4ca;background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.17);padding:6px 9px;border-radius:999px;font-weight:900}.platform h3{font-size:25px;margin:0 0 5px}.platform>p{color:var(--muted);margin:0 0 20px;font-size:13px}.release{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:18px}.release div{padding:13px;border-radius:15px;background:rgba(255,255,255,.035);border:1px solid var(--line)}.release small{display:block;color:var(--muted);font-size:10px}.release b{display:block;margin-top:2px;direction:ltr;text-align:right}.pactions{display:flex;flex-wrap:wrap;gap:10px;position:relative;z-index:2}.pactions a{flex:1;min-width:145px}
+    .accounts{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.account{padding:24px;border-radius:23px;background:var(--panel);border:1px solid var(--line);box-shadow:0 18px 46px rgba(0,0,0,.17)}.acctop{display:flex;align-items:center;justify-content:space-between;gap:12px}.acclogo{width:50px;height:50px;border-radius:16px;display:grid;place-items:center;background:rgba(255,255,255,.055);border:1px solid var(--line);font-weight:900}.account p{color:var(--muted);font-size:12px;margin:5px 0 13px}.num{direction:ltr;text-align:left;padding:13px 14px;border-radius:13px;background:rgba(0,0,0,.22);border:1px dashed rgba(255,255,255,.17);font-weight:900;letter-spacing:.5px;margin-bottom:11px}.copy{width:100%;min-height:43px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:#fff;font-weight:900;cursor:pointer}.copy:hover{background:rgba(255,255,255,.09)}.notice{margin-top:17px;padding:14px 16px;border-radius:15px;background:rgba(255,96,47,.075);border:1px solid rgba(255,96,47,.16);color:#ffd8c7;font-size:13px}
+    .contact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.contact a{display:flex;align-items:center;gap:13px;padding:20px;border-radius:19px;border:1px solid var(--line);background:rgba(255,255,255,.035);transition:.2s}.contact a:hover{transform:translateY(-3px);background:rgba(255,255,255,.065)}.contact .icon{margin:0;flex:0 0 50px}.contact b{display:block}.contact span{display:block;color:var(--muted);font-size:12px;overflow-wrap:anywhere}
+    .security{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.security .big{padding:30px;border-radius:27px;background:var(--panel);border:1px solid var(--line)}.security h3{margin:8px 0;font-size:27px}.security p{color:var(--muted);margin:0}.checks{display:grid;gap:11px;margin-top:20px}.check{display:flex;gap:11px;align-items:flex-start}.check i{width:23px;height:23px;border-radius:8px;display:grid;place-items:center;flex:0 0 23px;background:rgba(74,222,128,.1);color:var(--green);font-style:normal;font-size:12px;margin-top:3px}.legal{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.legal a{padding:20px;border-radius:18px;background:rgba(255,255,255,.035);border:1px solid var(--line);font-weight:800}.legal a span{display:block;color:var(--muted);font-size:11px;font-weight:400}
+    footer{border-top:1px solid rgba(255,255,255,.065);padding:28px 0;color:var(--muted);font-size:12px}.foot{display:flex;align-items:center;justify-content:space-between;gap:18px}.footlinks{display:flex;flex-wrap:wrap;gap:13px}.footlinks a:hover{color:#fff}
+    @media(max-width:950px){.links{display:none}.hero-grid,.security{grid-template-columns:1fr}.visual{min-height:510px}.grid3,.accounts,.contact{grid-template-columns:repeat(2,1fr)}.float{right:0}.platforms{grid-template-columns:1fr}}
+    @media(max-width:650px){.container{width:min(calc(100% - 22px),var(--max))}.navin{min-height:70px}.brand small{display:none}.nav .btn{min-height:42px;padding:0 13px;font-size:12px}h1{letter-spacing:-1px}.quick,.grid3,.accounts,.contact,.release,.legal{grid-template-columns:1fr}.hero-actions a{width:100%}.visual{min-height:auto;padding:20px 0 0}.float{position:relative;width:100%;right:auto;bottom:auto;margin-top:13px}.foot{flex-direction:column;text-align:center}.footlinks{justify-content:center}}
   </style>
 </head>
 <body>
   <nav class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="#home"><span class="logo">SW</span><span>SpicyWiFi Agent<small>Network Management Application</small></span></a>
-      <div class="nav-links"><a href="#about">عن البرنامج</a><a href="#features">المميزات</a><a href="#accounts">الحسابات</a><a href="#contact">التواصل</a></div>
-      <a class="nav-cta" href="#download">تحميل التطبيقات</a>
+    <div class="container navin">
+      <a class="brand" href="#home">
+        <img src="logo-spicywifi.svg" alt="SpicyWiFi Logo">
+        <span><strong>SpicyWiFi Agent</strong><small>Network Management Platform</small></span>
+      </a>
+      <div class="links">
+        <a href="#features">المميزات</a><a href="#apps">التطبيقات</a><a href="#accounts">الحسابات</a><a href="#contact">التواصل</a>
+      </div>
+      <a class="btn" href="#apps">تحميل البرنامج</a>
     </div>
   </nav>
 
@@ -48,92 +55,111 @@
     <header class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="badge"><span class="dot"></span> التطبيق متاح ويعمل بشكل مستقر</div>
-          <h1><span class="grad">SpicyWiFi Agent</span><br>إدارة أسهل، متابعة أسرع.</h1>
-          <p class="lead">تطبيق مخصص لعملاء ووكلاء SpicyWiFi لمتابعة الحسابات والأجهزة والخدمات والتنبيهات والدعم الفني من مكان واحد.</p>
-          <div class="hero-actions"><a class="btn primary" href="#download">⬇ تحميل التطبيق</a><a class="btn secondary" href="#features">استعراض المميزات</a></div>
-          <div class="hero-meta"><span>✓ واجهة عربية</span><span>✓ Android وWindows</span><span>✓ صفحات تحميل رسمية</span><span>✓ دعم فني مباشر</span></div>
+          <div class="badge"><span class="dot"></span> المنصة الرسمية لـ SpicyWiFi Agent</div>
+          <h1><span class="grad">SpicyWiFi Agent</span><br>إدارة ومراقبة الشبكة<br>من مكان واحد.</h1>
+          <p class="lead">حل متكامل لأصحاب الشبكات والوكلاء لإدارة الأجهزة، SAS Radius، Earthlink Reseller، أدوات الفحص والطيف، Smart Check، التنبيهات والتحديثات على Android وWindows.</p>
+          <div class="hero-actions"><a class="btn" href="#apps">⬇ تحميل التطبيقات</a><a class="btn2" href="#features">استعراض المميزات</a></div>
+          <div class="quick">
+            <div class="q"><b>Android + Windows</b><span>نسخ رسمية مستقرة</span></div>
+            <div class="q"><b>Auto Update</b><span>تحديثات تلقائية وآمنة</span></div>
+            <div class="q"><b>Network Tools</b><span>أدوات إدارة وفحص متقدمة</span></div>
+          </div>
         </div>
-        <aside class="preview">
-          <div class="preview-head"><div><small>لوحة إدارة الشبكة</small><h3>SpicyWiFi Agent</h3></div><div class="preview-icon">SW</div></div>
-          <div class="status-card"><small>حالة الخدمة</small><b>نشطة</b><small>جميع الأنظمة تعمل بصورة طبيعية</small></div>
-          <div class="mini-grid"><div class="mini">📡<b>الأجهزة</b><span>مراقبة وربط</span></div><div class="mini">📊<b>التقارير</b><span>متابعة الأداء</span></div><div class="mini">🛠️<b>أدوات الشبكة</b><span>Ping / DNS / Ports</span></div><div class="mini">🔄<b>Auto Update</b><span>تحديث من داخل البرنامج</span></div></div>
-        </aside>
+
+        <div class="visual">
+          <div class="glow"></div>
+          <div class="device">
+            <div class="device-top">
+              <div class="appid"><img src="logo-spicywifi.svg" alt="SpicyWiFi"><div><b>SpicyWiFi Agent</b><small>Control Center</small></div></div>
+              <span class="live">● LIVE</span>
+            </div>
+            <div class="mainstat"><small>حالة الأنظمة</small><strong>نشطة</strong><small>الخدمات تعمل بصورة مستقرة</small></div>
+            <div class="tiles">
+              <div class="tile">📡<b>Devices</b><span>مراقبة وإدارة الأجهزة</span></div>
+              <div class="tile">📶<b>Spectrum</b><span>فحص الترددات والروابط</span></div>
+              <div class="tile">👥<b>SAS Radius</b><span>إدارة المشتركين والباقات</span></div>
+              <div class="tile">🛠️<b>Smart Check</b><span>فحص وتحليل الشبكة</span></div>
+            </div>
+          </div>
+          <div class="float"><small>Network Activity</small><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        </div>
       </div>
     </header>
 
     <section id="features">
       <div class="container">
-        <div class="section-head"><div class="eyebrow">مميزات التطبيق</div><h2>كل ما تحتاجه لإدارة خدماتك</h2><p>واجهة سريعة تجمع الإدارة والمراقبة والدعم في مكان واحد.</p></div>
-        <div class="features">
-          <article class="card"><div class="icon">📡</div><h3>مراقبة الأجهزة</h3><p>متابعة حالة الأجهزة Online / Offline ومعلومات الاتصال والموارد.</p></article>
-          <article class="card"><div class="icon">📶</div><h3>فحص الترددات</h3><p>أدوات Spectrum وChannel Survey وتنظيم الروابط والسكترات.</p></article>
-          <article class="card"><div class="icon">🛠️</div><h3>أدوات الشبكة</h3><p>Ping وDNS وHTTP وفحص المنافذ وتتبع المسار ومعلومات الشبكة.</p></article>
-          <article class="card"><div class="icon">👥</div><h3>الحسابات والمشتركين</h3><p>إدارة حسابات التطبيق والمشتركين ومتابعة حالاتهم.</p></article>
-          <article class="card"><div class="icon">🌐</div><h3>SAS وEarthlink</h3><p>تكامل مع SAS Radius وEarthlink Reseller ومتابعة العمليات والأرباح.</p></article>
-          <article class="card"><div class="icon">🔔</div><h3>Telegram والتحديثات</h3><p>تنبيهات Telegram ونظام تحديث تلقائي آمن مع تحقق SHA-256.</p></article>
+        <div class="head"><div class="eye">Features</div><h2>أدوات احترافية لإدارة الشبكات</h2><p>مجموعة وظائف عملية ضمن واجهة واحدة تساعدك على المتابعة والفحص والإدارة بسرعة.</p></div>
+        <div class="grid3">
+          <article class="card"><div class="icon">📡</div><h3>إدارة الأجهزة</h3><p>متابعة أجهزة MikroTik وUbiquiti وMimosa وحالة الاتصال ومعلومات الشبكة الأساسية.</p></article>
+          <article class="card"><div class="icon">📶</div><h3>Spectrum & Scan</h3><p>فحص الترددات والقنوات مع أوضاع آمنة ومتقدمة للروابط والأجهزة المدعومة.</p></article>
+          <article class="card"><div class="icon">👥</div><h3>SAS Radius</h3><p>متابعة المشتركين والحالات والباقات وتسهيل عمليات الإدارة اليومية.</p></article>
+          <article class="card"><div class="icon">🌐</div><h3>Earthlink Reseller</h3><p>متابعة البيانات والحالات والعمليات المرتبطة بحساب الوكيل من داخل البرنامج.</p></article>
+          <article class="card"><div class="icon">🧪</div><h3>Smart Check</h3><p>قراءة Signal وNoise وSNR وCCQ وChannel Width وUptime وعرض النتائج بوضوح.</p></article>
+          <article class="card"><div class="icon">🔄</div><h3>تحديث تلقائي</h3><p>نظام تحديث رسمي مع قراءة بيانات آخر إصدار والتحقق من سلامة الملفات عبر SHA-256.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="about">
+    <section id="apps">
       <div class="container">
-        <div class="section-head"><div class="eyebrow">عن SpicyWiFi Agent</div><h2>منصة واحدة للشبكة والعملاء</h2><p>نسخ Android وWindows الرسمية تعمل مع بيانات SpicyWiFi السحابية من نفس الحساب.</p></div>
+        <div class="head"><div class="eye">Downloads</div><h2>اختر النسخة المناسبة لجهازك</h2><p>الإصدارات وروابط التحميل أدناه تُقرأ تلقائياً من ملفات التحديث الرسمية في نفس المستودع.</p></div>
+        <div class="platforms">
+          <article class="platform">
+            <div class="ptop"><div class="picon">🤖</div><span class="stable">STABLE</span></div>
+            <h3>SpicyWiFi Agent for Android</h3><p>نسخة الهاتف لمتابعة الخدمات والأجهزة والحسابات والوصول السريع إلى أدوات SpicyWiFi.</p>
+            <div class="release"><div><small>الإصدار الحالي</small><b id="androidVersion">—</b></div><div><small>حجم الملف</small><b id="androidSize">—</b></div></div>
+            <div class="pactions"><a id="androidDownload" class="btn" href="android.html">⬇ تحميل Android</a><a class="btn2" href="android.html">تفاصيل الإصدار</a></div>
+          </article>
+          <article class="platform">
+            <div class="ptop"><div class="picon">🪟</div><span class="stable">STABLE</span></div>
+            <h3>SpicyWiFi Agent for Windows</h3><p>لوحة إدارة متكاملة على Windows 10 / 11 لمراقبة الشبكات وتشغيل أدوات الإدارة والفحص المتقدمة.</p>
+            <div class="release"><div><small>الإصدار الحالي</small><b id="windowsVersion">—</b></div><div><small>حجم الملف</small><b id="windowsSize">—</b></div></div>
+            <div class="pactions"><a id="windowsDownload" class="btn" href="windows.html">⬇ تحميل Windows</a><a class="btn2" href="windows.html">تفاصيل الإصدار</a></div>
+          </article>
+        </div>
       </div>
     </section>
 
     <section id="accounts">
       <div class="container">
-        <div class="section-head"><div class="eyebrow">الحسابات المعتمدة</div><h2>طرق الدفع والتحويل</h2><p>الأرقام الرسمية لخدمات SpicyWiFi.</p></div>
+        <div class="head"><div class="eye">Payment Accounts</div><h2>الحسابات الرسمية للدفع والتحويل</h2><p>انسخ الرقم المطلوب مباشرة ثم أرسل وصل التحويل إلى الدعم الرسمي.</p></div>
         <div class="accounts">
-          <article class="card"><div class="icon">💵</div><h3>زين كاش</h3><div class="account-num" id="zain">07508504566</div><button class="copy" data-copy="zain">نسخ الرقم</button></article>
-          <article class="card"><div class="icon">💳</div><h3>ماستر كارد</h3><div class="account-num" id="master">7114198315</div><button class="copy" data-copy="master">نسخ الرقم</button></article>
-          <article class="card"><div class="icon">💰</div><h3>سوبر كي</h3><div class="account-num" id="superqi">07719828578</div><button class="copy" data-copy="superqi">نسخ الرقم</button></article>
+          <article class="account"><div class="acctop"><div><b>زين كاش</b><small style="display:block;color:var(--muted)">ZainCash</small></div><div class="acclogo">ZC</div></div><p>رقم المحفظة الرسمي لـ SpicyWiFi</p><div class="num" id="zain">07508504566</div><button class="copy" data-copy="zain">نسخ الرقم</button></article>
+          <article class="account"><div class="acctop"><div><b>ماستر كارد</b><small style="display:block;color:var(--muted)">Mastercard</small></div><div class="acclogo">MC</div></div><p>رقم البطاقة الرسمي لـ SpicyWiFi</p><div class="num" id="master">7114198315</div><button class="copy" data-copy="master">نسخ الرقم</button></article>
+          <article class="account"><div class="acctop"><div><b>سوبر كي</b><small style="display:block;color:var(--muted)">SuperQi</small></div><div class="acclogo">SQ</div></div><p>رقم المحفظة الرسمي لـ SpicyWiFi</p><div class="num" id="superqi">07719828578</div><button class="copy" data-copy="superqi">نسخ الرقم</button></article>
         </div>
-      </div>
-    </section>
-
-    <section id="download">
-      <div class="container">
-        <div class="download-box">
-          <div><h2>حمّل SpicyWiFi Agent</h2><p>اختر النسخة المناسبة لجهازك — Android أو Windows.</p></div>
-          <div class="download-actions">
-            <a class="download-app" href="android.html"><span class="picon">🤖</span><span>تحميل Android<small>APK</small><span class="release-pill">● <span id="androidVersion">آخر إصدار Android</span></span></span></a>
-            <a class="download-app" href="windows.html"><span class="picon">🪟</span><span>تحميل Windows<small>Windows 10 / 11</small><span class="release-pill">● <span id="windowsVersion">آخر إصدار Stable</span></span></span></a>
-          </div>
-        </div>
-        <div class="download-info">✅ Android وWindows مرتبطان الآن بصفحات التحميل الرسمية، ويتم عرض أرقام الإصدارات من ملفات التحديث تلقائياً.</div>
+        <div class="notice">بعد التحويل يرجى إرسال صورة الوصل مع اسم الحساب أو رقم الاشتراك إلى الدعم الرسمي لتأكيد عملية الدفع.</div>
       </div>
     </section>
 
     <section id="contact">
       <div class="container">
-        <div class="section-head"><div class="eyebrow">تواصل معنا</div><h2>الدعم الرسمي لـ SpicyWiFi</h2><p>القنوات الرسمية للدعم والاستفسارات.</p></div>
+        <div class="head"><div class="eye">Official Support</div><h2>تواصل مع SpicyWiFi</h2><p>القنوات الرسمية للدعم والاستفسارات والتحديثات.</p></div>
         <div class="contact">
-          <a class="card" href="https://t.me/spicywifi_1iq" target="_blank" rel="noopener"><div class="icon">✈️</div><div><b>Telegram</b><span dir="ltr">@spicywifi_1iq</span></div></a>
-          <a class="card" href="https://wa.me/9647880482666" target="_blank" rel="noopener"><div class="icon">💬</div><div><b>WhatsApp</b><span dir="ltr">07880482666</span></div></a>
-          <a class="card" href="mailto:support.wifispicy@gmail.com"><div class="icon">✉️</div><div><b>Email</b><span dir="ltr">support.wifispicy@gmail.com</span></div></a>
+          <a href="https://t.me/spicywifi_1iq" target="_blank" rel="noopener"><div class="icon">✈️</div><div><b>Telegram</b><span dir="ltr">@spicywifi_1iq</span></div></a>
+          <a href="https://wa.me/9647880482666" target="_blank" rel="noopener"><div class="icon">💬</div><div><b>WhatsApp</b><span dir="ltr">07880482666</span></div></a>
+          <a href="mailto:support.wifispicy@gmail.com"><div class="icon">✉️</div><div><b>Email</b><span dir="ltr">support.wifispicy@gmail.com</span></div></a>
         </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container security">
+        <div class="big"><div class="eye">Security & Updates</div><h3>تنزيلات رسمية وتحديثات موثوقة</h3><p>الموقع مرتبط مباشرة ببيانات الإصدارات الموجودة في المستودع، لذلك عند تحديث ملفات النسخ سيظهر الإصدار الجديد ورابط التحميل تلقائياً في الصفحة الرئيسية.</p><div class="checks"><div class="check"><i>✓</i><span>استخدام ملفات <b dir="ltr">android-version.json</b> و <b dir="ltr">windows-version.json</b>.</span></div><div class="check"><i>✓</i><span>الاحتفاظ بصفحات Android وWindows المستقلة للحصول على تفاصيل الإصدار.</span></div><div class="check"><i>✓</i><span>روابط الخصوصية والشروط وحذف الحساب متاحة من الموقع الرسمي.</span></div></div></div>
+        <div class="legal"><a href="android.html">Android<span>صفحة التحميل والتفاصيل</span></a><a href="windows.html">Windows<span>صفحة التحميل والتفاصيل</span></a><a href="privacy-policy.html">سياسة الخصوصية<span>Privacy Policy</span></a><a href="terms.html">الشروط والأحكام<span>Terms of Service</span></a><a href="delete-account.html">حذف الحساب<span>Account Deletion</span></a><a href="https://github.com/engfaris98/spicywifi" target="_blank" rel="noopener">GitHub<span>المستودع الرسمي</span></a></div>
       </div>
     </section>
   </main>
 
-  <footer><div class="container footer"><div>© <span id="year"></span> SpicyWiFi. جميع الحقوق محفوظة.</div><div>SpicyWiFi Agent — Official Website</div></div></footer>
+  <footer><div class="container foot"><div>© <span id="year"></span> SpicyWiFi. جميع الحقوق محفوظة.</div><div class="footlinks"><a href="privacy-policy.html">الخصوصية</a><a href="terms.html">الشروط</a><a href="delete-account.html">حذف الحساب</a><a href="https://t.me/spicywifi_1iq" target="_blank" rel="noopener">Telegram</a></div></div></footer>
 
   <script>
     document.getElementById('year').textContent=new Date().getFullYear();
-    document.querySelectorAll('.copy').forEach(btn=>btn.addEventListener('click',async()=>{
-      const el=document.getElementById(btn.dataset.copy);const v=el.textContent.trim();
-      try{await navigator.clipboard.writeText(v);const old=btn.textContent;btn.textContent='تم النسخ ✓';setTimeout(()=>btn.textContent=old,1500)}catch(e){alert('انسخ الرقم يدوياً: '+v)}
-    }));
-    fetch('windows-version.json?ts='+Date.now(),{cache:'no-store'})
-      .then(r=>{if(!r.ok)throw new Error('manifest');return r.json()})
-      .then(d=>{if(d.version){document.getElementById('windowsVersion').textContent='الإصدار '+d.version+' Stable'}})
-      .catch(()=>{});
-    fetch('android-version.json?ts='+Date.now(),{cache:'no-store'})
-      .then(r=>{if(!r.ok)throw new Error('manifest');return r.json()})
-      .then(d=>{if(d.version){document.getElementById('androidVersion').textContent='الإصدار '+d.version}})
-      .catch(()=>{});
+    function humanSize(n){if(!n)return'—';const u=['B','KB','MB','GB'];let i=0,v=Number(n);while(v>=1024&&i<u.length-1){v/=1024;i++}return(v>=100||i===0?v.toFixed(0):v.toFixed(1))+' '+u[i]}
+    async function release(json,versionId,sizeId,linkId,fallback){try{const r=await fetch(json+'?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw 0;const d=await r.json();if(d.version)document.getElementById(versionId).textContent=d.version;if(d.sizeBytes)document.getElementById(sizeId).textContent=humanSize(d.sizeBytes);if(d.downloadUrl)document.getElementById(linkId).href=d.downloadUrl}catch(e){document.getElementById(linkId).href=fallback}}
+    release('android-version.json','androidVersion','androidSize','androidDownload','android.html');
+    release('windows-version.json','windowsVersion','windowsSize','windowsDownload','windows.html');
+    document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',async()=>{const v=document.getElementById(b.dataset.copy).textContent.trim();try{await navigator.clipboard.writeText(v);const t=b.textContent;b.textContent='تم النسخ ✓';setTimeout(()=>b.textContent=t,1500)}catch(e){alert('انسخ الرقم يدوياً: '+v)}}));
   </script>
 </body>
 </html>
