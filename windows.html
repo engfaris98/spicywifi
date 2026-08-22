@@ -29,7 +29,7 @@
         <div>
           <div class="badge"><span class="dot"></span> النسخة الرسمية المستقرة</div>
           <h1>حمّل <span class="grad">SpicyWiFi Agent</span><br>لنظام Windows</h1>
-          <p class="lead">لوحة إدارة ومراقبة SpicyWiFi على الكمبيوتر، مع مزامنة البيانات، مراقبة الأجهزة، أدوات الشبكة والطيف، التنبيهات، التحديث التلقائي، وتحسينات Earthlink Reseller وSAS Radius.</p>
+          <p class="lead">لوحة إدارة ومراقبة SpicyWiFi على الكمبيوتر، مع مزامنة البيانات، مراقبة الأجهزة، أدوات الشبكة والطيف، Smart Check، التنبيهات، التحديث التلقائي، وتحسينات Earthlink Reseller وSAS Radius.</p>
           <a id="downloadButton" class="download-btn disabled" href="#">⬇ <span>جاري تجهيز رابط التحميل...</span></a>
           <div class="sub">Windows 10 / 11 • 64-bit • تحديثات تلقائية من داخل البرنامج</div>
           <div id="loadError" class="error">تعذر قراءة معلومات آخر إصدار. يمكنك المحاولة بعد قليل.</div>
@@ -38,7 +38,7 @@
         <aside class="device">
           <div class="device-title">SpicyWiFi Agent for Windows</div>
           <div class="status"><span class="dot"></span> جاهز للتنزيل</div>
-          <div id="version" class="version skeleton">17.0.4</div>
+          <div id="version" class="version skeleton">17.0.7</div>
           <span class="stable">STABLE</span>
           <div class="meta">
             <div class="meta-row"><span>الإصدار</span><strong id="versionMeta">—</strong></div>
@@ -55,12 +55,12 @@
         <div class="cards">
           <article class="card"><div class="icon">🔄</div><h3>تحديث تلقائي</h3><p>عند صدور نسخة جديدة سيظهر إشعار داخل البرنامج ويمكن تنزيلها وتثبيتها مباشرة.</p></article>
           <article class="card"><div class="icon">🛡️</div><h3>تحقق SHA-256</h3><p>يتم التحقق من سلامة ملف التحديث قبل تشغيله لضمان مطابقة النسخة الرسمية.</p></article>
-          <article class="card"><div class="icon">🖥️</div><h3>إدارة متكاملة</h3><p>الأجهزة، SAS Radius، Earthlink، أدوات الشبكة، Spectrum، Telegram والتقارير من مكان واحد.</p></article>
+          <article class="card"><div class="icon">🖥️</div><h3>إدارة متكاملة</h3><p>الأجهزة، SAS Radius، Earthlink، Smart Check، أدوات الشبكة، Spectrum، Telegram والتقارير من مكان واحد.</p></article>
         </div>
 
         <div class="notes new">
-          <b>الجديد في الإصدار 17.0.4</b>
-          <p>تحسين Earthlink Reseller مع دعم All وPagination لجميع الصفحات، وتصحيح حالات Active وOnline وOffline وExpired وDebts، واعتماد Online على حالة الاتصال الصحيحة بدل Payment Status. التحديث داخل Earthlink أصبح يدويًا بزر Refresh مع عرض وقت آخر تحديث وتحميل Expired وDebts عند فتحهما، مع واجهة Compact أوضح. كما تم تحسين SAS Radius بإخفاء روابط السيرفرات الجاهزة وعرض أسماء السيرفرات فقط، وإظهار حقل الرابط عند اختيار «رابط مخصص»، مع Migration آمن للإعدادات القديمة والحفاظ على دعم بطاقات SAS، إضافة إلى إصلاحات Parsing وLoading وExceptions مع الحفاظ على نظام التحديث وتسجيل الدخول التلقائي الآمن.</p>
+          <b>الجديد في الإصدار 17.0.7</b>
+          <p>تحسين SAS Radius وحالات المشتركين مع دعم Active وNear Expiry وExpired وDebts وتطوير تغيير الباقة عبر changeProfile. تطوير Mimosa Spectrum ليعتمد على الترددات الحقيقية والمدعومة من الجهاز، مع Safe Apply والتحقق بعد التطبيق ومحاولة الرجوع للإعداد السابق عند الفشل. تحسين Spectrum الآمن في MikroTik RouterOS 6، وإضافة وضع Safe Scan وAdvanced Scan لأجهزة Ubiquiti. الحفاظ على Smart Check مع تحسين قراءة Signal وNoise وSNR وCCQ وChannel Width وUptime والتعامل الواضح مع القيم غير المتوفرة، إلى جانب تحسينات Earthlink Reseller والاستقرار ومعالجة أخطاء Parsing وTimeout وNetwork Errors مع الحفاظ على تسجيل الدخول وFirebase ونظام التحديث التلقائي.</p>
         </div>
 
         <div class="notes">
@@ -82,10 +82,10 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     const fallback = {
-      version: '17.0.4',
-      downloadUrl: 'https://github.com/engfaris98/spicywifi/releases/download/v17.0.4/SpicyWiFiAgent-17.0.4.exe',
-      sha256: 'cd62032fe41f486a2c989eb06b76f2c101b3bd6c77c43f7b29fc3ce3d7071c9b',
-      sizeBytes: 114700800
+      version: '17.0.7',
+      downloadUrl: 'https://github.com/engfaris98/spicywifi/releases/download/v17.0.7/SpicyWiFiAgent-17.0.7.exe',
+      sha256: 'ee0de103d99c6b562b33bed8edb487cb90449471ed688ead093747ec2dc72f99',
+      sizeBytes: 114795008
     };
 
     function humanSize(bytes){
