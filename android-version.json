@@ -1,13 +1,13 @@
 {
   "available": true,
-  "version": "12.1.22",
-  "versionCode": 144,
+  "version": "12.11.0",
+  "versionCode": 195,
   "packageName": "com.spicywifi.agent",
   "minSdk": 26,
   "targetSdk": 36,
   "downloadUrl": "https://github.com/engfaris98/spicywifi/releases/latest/download/SpicyWiFiAgent-Android.apk",
-  "sha256": "49709ce0cab20180951a3be924181e1740325f61ba5ba85cd572915b7035e85f",
-  "sizeBytes": 6349212,
-  "releaseNotes": "SpicyWiFi Agent Android 12.1.22 - إخفاء روابط سيرفرات SAS Radius من واجهة المستخدم، عرض أسماء السيرفرات فقط، تشغيل الروابط الحقيقية بالخلفية، تحسين اختيار السيرفرات الجاهزة، والإبقاء على خيار الرابط المخصص مع تحسينات عامة على الأداء والاستقرار.",
+  "sha256": "68bb0a7e85bb3ec3b0623dda3759d7ce2b135e129978c095907688bcf0ee689c",
+  "sizeBytes": 518148909,
+  "releaseNotes": "SpicyWiFi Agent Android 12.11.0 - تحسين SAS Online، عرض Signal وLAN لمشتركي SAS Radius وEarthlink، تطوير Ubiquiti Live Monitor، سجل صيانة الأجهزة، حماية بيانات الاتصال، وتحسين الأداء والواجهات.",
   "forceUpdate": false
 }
