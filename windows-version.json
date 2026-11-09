@@ -1,8 +1,10 @@
-{
-  "version": "17.0.7",
-  "mandatory": false,
-  "downloadUrl": "https://github.com/engfaris98/spicywifi/releases/download/v17.0.7/SpicyWiFiAgent-17.0.7.exe",
-  "sha256": "ee0de103d99c6b562b33bed8edb487cb90449471ed688ead093747ec2dc72f99",
-  "sizeBytes": 114795008,
-  "releaseNotes": "SpicyWiFi Agent 17.0.7 Stable - تحسين SAS Radius وحالات المشتركين ودعم changeProfile، تطوير Mimosa Spectrum بالاعتماد على الترددات الحقيقية والمدعومة مع Safe Apply والتحقق والرجوع عند الفشل، تحسين Spectrum الآمن لـ MikroTik RouterOS 6، إضافة Safe وAdvanced Scan لأجهزة Ubiquiti، والحفاظ على Smart Check مع تحسين Signal/Noise/SNR/CCQ/Channel Width/Uptime والتعامل مع البيانات غير المتوفرة، إضافة إلى تحسينات Earthlink Reseller والاستقرار ومعالجة Parsing وTimeout وNetwork Errors مع الحفاظ على تسجيل الدخول وFirebase ونظام التحديث التلقائي."
+﻿{
+    "version":  "17.2.0",
+    "downloadUrl":  "https://github.com/engfaris98/spicywifi/releases/download/v17.2.0/SpicyWiFiAgent-17.2.0-ZeroTrust-FREE-STAGING-Setup.exe",
+    "sha256":  "55be8b4d8a5ccd300a17d2934ce69d96eb276da63fe59e410607dd676bb6743d",
+    "sizeBytes":  99952989,
+    "mandatory":  false,
+    "minimumVersion":  "0.0.0",
+    "releaseNotes":  "تحديث SpicyWiFi Agent",
+    "signature":  "dgRKHYZCxKA5N5pIZ80gg3+o7+12Tzw5a3OYpkDWuldW6vaTFwS9AFYSh4TNRXuglw8G5PCsxbetv/n0ioJ8T0FHqzI0qxPFC178zUKotBTtQcgjjZko27s58XCjbujil5iCR7HCftlgyLgvuTPnCFQiR+ME7ghn2GxlyYloZ43qDkwqB25WibibmXoFDQjM+kMTTjJWIBbr4HqyluFYS6Wx75Boji+O/1cvfuZG8weAS8OK3a/ZcL/99jBAOd5jiOe2P340d9U9cYn64JHqd5ES4RLtXIDs8QPmPZX7l/rb5yKxGwUEm5rpGS/pbfxdmSm5nb+82xiYXvf3EZiDHwluDXgFfJ0T1b2PeOIgc647I8xu0OJl2govCtdlp4h0CdWaOMNuFBHKT1lk4APhppQzhBiKFFrfgXFN7hKkG/kyW2CnYlODONFBD8fQvrAz0Yf1zuc9zlJp/empLnr3K6L2VbV9DYTVIG2EsZ5hbQWMspwGMr+VMQEuuMQRizaA"
 }
