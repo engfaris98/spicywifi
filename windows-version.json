@@ -1,10 +1,10 @@
 {
-    "version":  "17.7.4",
-    "downloadUrl":  "https://github.com/engfaris98/spicywifi/releases/download/v17.7.4/SpicyWiFiAgent-17.7.4-ZeroTrust-FREE-STAGING-Setup.exe",
-    "sha256":  "b86702b94c8d98f755b1ce88b27a287094ed11d8780773ebb1906ee9d18cc802",
-    "sizeBytes":  101610589,
+    "version":  "17.7.5",
+    "downloadUrl":  "https://github.com/engfaris98/spicywifi/releases/download/v17.7.5/SpicyWiFiAgent-17.7.5-ZeroTrust-FREE-STAGING-Setup.exe",
+    "sha256":  "8c46992acf50899fe6e178e8c3feeeefeccab7f8ac9355b68b9b2c62fbc55f38",
+    "sizeBytes":  101592046,
     "mandatory":  false,
     "minimumVersion":  "0.0.0",
     "releaseNotes":  "تحديث SpicyWiFi Agent",
-    "signature":  "jJjFoKyidkR++Xts6eYVm5s0RAbzM6VDr1yRG7u/rOCyCVZg+7HuXmK6WkQ2mDX6TY49HHRs8Sr35B2cFFOf3J3Fjwfns0EDGwD7ZQq5kNNxU+XKQCvqS1eGf22/ADfc6Ca8YCH/Ah9VClP1IZO3oHLw1cW9eyktIBgmY9zqFZ3vZuiHO77qByPHdbALtLqBWtb5n0Qid+8sikrRPnCGkChjy05gMQvR5HORsBhIaCuXTTs3UfwQnRY2xxK6nDrQwpM/oBVAXisLOY0Wstra/eZ4u61PCKn6BQU0jG4z0mNHu7s8IeezFHIt4nI/+zAm4BNgCWPlsj86SXOMSpugz6ZeNVDtA4Z3vEdqok8CAsTF6IU24XY2VtGVK+d+kBFGGt44MzGXSreVhumBgOU5kgdSed9YT8KCdZQGAkS7YO/FYdsKvaJTWTlEsD3o6EBO4zOx4JZ3xsjUU7WqF8jkM/gRyr9LdqjonMfqAGVRH4bG4QfFBruIARqZGbkxitfF"
+    "signature":  "TARS1fHFIAKr2LEzIOhwm2+Rtz0rHbzmJH5+qyfodStKB018qnGNnkz5OyAVXrJDGhbGacJbXMvB6z0DJrlSX6DAhvBv3Z62ifJpH8VOFozYy42b66BZPPV+RX5bm1oq9oGHEn9SxnNpTdNhHBZBNXy+f7vMTm5Lm5Uf1nA060ApnVm3jmS5RPdefIYileTIlJmJH+MAmh2Xp6hFaeWsqzIF3LoLxNSnLwJXkC/J8bFTKDZElF0rQUY41FO698l0KrDrnywgAyNi7rHc6QeguFegwJTbo3xsncucoYL4oOD8Gi0yhFyJqcT+FHWEGjIzFwTl5G3RF3lAGWmxieHrC+RAam6QdWEVXV4w4358DFMZAAKABhQeVHu11JXxgnSNoiflrCpijuiLd0TpwUeveGC87ssNh01vL4U7Qw+8cELBe3AEEO3i0gB1qlLwx3TEDv+h59k3fiU0NS9kmdx91I3hghdRQ8IAmcMo66ItjKEN8l/XmQOkdYjrR7YxDxpC"
 }
